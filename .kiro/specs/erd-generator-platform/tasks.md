@@ -23,8 +23,8 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Write `SavedDiagram` interface
     - _Requirements: 2.2, 2.3, 3.5, 4.6, 4.7, 6.3, 8.1, 9.1_
 
-- [ ] 3. Schema validation service
-  - [ ] 3.1 Implement `validateSchema` in `src/services/schemaValidator.ts`
+- [x] 3. Schema validation service
+  - [x] 3.1 Implement `validateSchema` in `src/services/schemaValidator.ts`
     - Check all entity names are unique within the schema
     - Check every entity has at least one attribute
     - Check every non-weak entity has exactly one `isKey === true` attribute
@@ -33,7 +33,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Return `ValidationResult` with `valid === true` iff `errors` is empty
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8_
 
-  - [ ]* 3.2 Write property tests for `validateSchema`
+  - [x] 3.2 Write property tests for `validateSchema`
     - **Property 2: Validation Soundness — Valid iff No Errors**
     - **Validates: Requirements 4.6, 4.7, 4.8**
     - **Property 3: Validation Rejects Invalid Schemas**
@@ -52,7 +52,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Never throw an unhandled exception for any string input
     - _Requirements: 3.2, 3.3, 3.4, 3.6, 3.7, 3.9, 10.1, 10.2, 10.3, 10.4, 10.5, 10.7_
 
-  - [ ]* 4.2 Write property tests for `sqlParser.parse`
+  - [ ] 4.2 Write property tests for `sqlParser.parse`
     - **Property 4: SQL Parser Never Throws**
     - **Validates: Requirements 3.9**
     - **Property 5: SQL Parse → Validate Consistency (Round-Trip)**
@@ -74,7 +74,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Map all other `Attribute` → `'ellipse'`
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7_
 
-  - [ ]* 6.2 Write property tests for `resolveShape`
+  - [ ] 6.2 Write property tests for `resolveShape`
     - **Property 1: Shape Mapping is Total and Correct**
     - **Validates: Requirements 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7**
 
@@ -87,7 +87,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Return `LayoutResult` with a `nodes` Map and an `edges` array
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.7_
 
-  - [ ]* 7.2 Write property tests for `computeForceDirectedLayout`
+  - [ ] 7.2 Write property tests for `computeForceDirectedLayout`
     - **Property 7: Layout Completeness**
     - **Validates: Requirements 6.1, 6.3, 6.4**
     - **Property 8: Layout Boundary Invariant**
@@ -126,7 +126,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Produce exactly one SVG `<g>` group per schema element
     - _Requirements: 5.1–5.13_
 
-  - [ ]* 8.3 Write property tests for `ERDRenderer`
+  - [ ] 8.3 Write property tests for `ERDRenderer`
     - **Property 9: Renderer Completeness — One Shape Per Element**
     - **Validates: Requirements 5.12, 5.9, 5.10**
     - **Property 10: Renderer Safety — Valid Schema Never Throws**
@@ -157,7 +157,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Do not reset the transform when the schema changes
     - _Requirements: 7.5_
 
-  - [ ]* 10.4 Write property test for canvas state preservation
+  - [ ] 10.4 Write property test for canvas state preservation
     - **Property 17: Canvas State Preserved on Schema Update**
     - **Validates: Requirements 7.5**
 
@@ -167,7 +167,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - JPG export: serialise the SVG to a data URL, draw onto an `HTMLCanvasElement` at 2x resolution with a white background fill, then call `canvas.toBlob` with `image/jpeg`; return the resulting `Blob`
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 
-  - [ ]* 11.2 Write property tests for `exportDiagram`
+  - [ ] 11.2 Write property tests for `exportDiagram`
     - **Property 13: Export Produces Correct MIME Type and Non-Empty Blob**
     - **Validates: Requirements 8.3, 8.4, 8.5**
 
@@ -213,7 +213,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - Display a descriptive error message for authentication failures without exposing internal details
     - _Requirements: 1.3, 1.6_
 
-  - [ ]* 14.3 Write property test for unauthenticated access restriction
+  - [ ] 14.3 Write property test for unauthenticated access restriction
     - **Property 18: Unauthenticated Access Restriction**
     - **Validates: Requirements 1.6, 9.6**
 
@@ -236,7 +236,7 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
     - On load, restore the `SchemaModel` and trigger ERD re-render
     - _Requirements: 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7_
 
-  - [ ]* 16.3 Write property tests for diagram persistence
+  - [ ] 16.3 Write property tests for diagram persistence
     - **Property 14: Diagram Load Round-Trip**
     - **Validates: Requirements 9.7**
     - **Property 15: Diagram Ownership Isolation**
