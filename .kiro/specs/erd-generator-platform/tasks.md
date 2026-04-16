@@ -14,8 +14,8 @@ Incremental implementation of a React 18 + TypeScript + Firebase web application
   - Add `firebase.ts` config module that reads environment variables for Firebase SDK v10 initialisation (Auth + Firestore)
   - _Requirements: 1.1, 1.2_
 
-- [ ] 2. Core TypeScript types and interfaces
-  - [ ] 2.1 Define all domain types in `src/types/schema.ts`
+- [x] 2. Core TypeScript types and interfaces
+  - [x] 2.1 Define all domain types in `src/types/schema.ts`
     - Write `DataType`, `Cardinality`, `ChenShape`, `ExportFormat` union types
     - Write `Attribute`, `Entity`, `Relationship`, `SchemaModel` interfaces matching the design data models
     - Write `ParseError`, `ParseResult`, `ValidationResult` interfaces
